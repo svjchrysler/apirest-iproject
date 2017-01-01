@@ -1,7 +1,8 @@
 {
-    "comment": "",
-    "ignore": "test",
-    "package": [
+    "ImportPath": "api-iproject",
+    "GoVersion": "go1.7.4",
+    "GodepVersion": "v75",
+    "Packages": [
         {
             "path": "github.com/kataras/iris"
         },
@@ -12,10 +13,9 @@
             "path": "github.com/jinzhu/gorm/dialects/postgres"
         }
     ],
-    "deps": [
+    "Deps": [
         {
             "path": "./packages"
         }
-    ],
-    "rootPath": "github.com/salguero/ApiRestFillIProject"
+    ]
 }
