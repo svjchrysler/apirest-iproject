@@ -14,15 +14,15 @@ import (
 
 const (
 	//HOST database
-	HOST = "localhost"
+	HOST = "ec2-54-221-217-158.compute-1.amazonaws.com"
 	//USER database
-	USER = "postgres"
+	USER = "kaytqbatuadino"
 	//DB database
-	DB = "ApiIProject"
+	DB = "d1471skb605131"
 	//SSL database
 	SSL = "disable"
 	//PASSWORD database
-	PASSWORD = "k3yl0gg3r"
+	PASSWORD = "2eb0d490c52f84554882caf3b8acd2dc4613cd76702410bf23e47a5a5c962ead"
 )
 
 func conection() *gorm.DB {
