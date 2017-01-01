@@ -1,22 +1,19 @@
 {
-    "ImportPath": "github.com/salguero/ApiRestFullIProject",
-    "GoVersion": "go1.7.4",
-    "GodepVersion": "v75",
-    "Packages": [
-        "./...",
-        {
-            "ImportPath": "github.com/kataras/iris"
-        },
-        {
-            "ImportPath": "github.com/jinzhu/gorm"
-        },
-        {
-            "ImportPath": "github.com/jinzhu/gorm/dialects/postgres"
-        }
-    ],
-    "Deps": [
-        {
-            "path": "github.com/salguero/ApiRestFullIProject/packages"
-        }
-    ]
+	"ImportPath": "github.com/salguero/ApiRestFullIProject",
+	"GoVersion": "go1.7",
+	"GodepVersion": "v75",
+	"Packages": [
+		"./..."
+	],
+	"Deps": [
+		{
+			"ImportPath":"github.com/jinzhu/gorm"
+		},
+		{
+			"ImportPath":"github.com/jinzhu/gorm/dialects/postgres"
+		},
+		{
+			"ImportPath":"github.com/kataras/iris"
+		}
+	]
 }
