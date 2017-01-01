@@ -1,8 +1,9 @@
 {
-    "ImportPath": "api-iproject",
+    "ImportPath": "github.com/salguero/ApiRestFullIProject",
     "GoVersion": "go1.7.4",
     "GodepVersion": "v75",
     "Packages": [
+        "./...",
         {
             "path": "github.com/kataras/iris"
         },
