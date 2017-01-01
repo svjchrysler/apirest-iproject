@@ -5,18 +5,18 @@
     "Packages": [
         "./...",
         {
-            "path": "github.com/kataras/iris"
+            "ImportPath": "github.com/kataras/iris"
         },
         {
-            "path": "github.com/jinzhu/gorm"
+            "ImportPath": "github.com/jinzhu/gorm"
         },
         {
-            "path": "github.com/jinzhu/gorm/dialects/postgres"
+            "ImportPath": "github.com/jinzhu/gorm/dialects/postgres"
         }
     ],
     "Deps": [
         {
-            "path": "./packages"
+            "path": "github.com/salguero/ApiRestFullIProject/packages"
         }
     ]
 }
