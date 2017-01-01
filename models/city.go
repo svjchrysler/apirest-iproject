@@ -1,4 +1,4 @@
-package modelsdb
+package models
 
 //City class
 type City struct {

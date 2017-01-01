@@ -1,5 +1,5 @@
 {
-	"ImportPath": "github.com/salguero/ApiRestFullIProject",
+	"ImportPath": "github.com/salguero/apirest-iproject",
 	"GoVersion": "go1.7",
 	"GodepVersion": "v75",
 	"Packages": [

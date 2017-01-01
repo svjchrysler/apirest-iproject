@@ -9,7 +9,7 @@ import (
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/postgres"
 	"github.com/kataras/iris"
-	"github.com/salguero/ApiRestFullIProject/modelsdb"
+	"github.com/salguero/apirest-iproject/models"
 )
 
 const (
@@ -39,17 +39,17 @@ func migrations() {
 
 	db := conection()
 
-	if !db.HasTable(&modelsdb.Country{}) {
-		db.CreateTable(&modelsdb.Country{})
+	if !db.HasTable(&models.Country{}) {
+		db.CreateTable(&models.Country{})
 	}
 
-	if !db.HasTable(&modelsdb.City{}) {
-		db.CreateTable(&modelsdb.City{}).
+	if !db.HasTable(&models.City{}) {
+		db.CreateTable(&models.City{}).
 			AddForeignKey("country_id", "countries(id)", "CASCADE", "CASCADE")
 	}
 
-	if !db.HasTable(&modelsdb.Product{}) {
-		db.CreateTable(&modelsdb.Product{})
+	if !db.HasTable(&models.Product{}) {
+		db.CreateTable(&models.Product{})
 	}
 
 	defer db.Close()
@@ -58,7 +58,7 @@ func migrations() {
 //GetAPIContries get data contries
 func GetAPIContries(ctx *iris.Context) {
 	ctx.SetHeader("Access-Control-Allow-Origin", "*")
-	var countries []modelsdb.Country
+	var countries []models.Country
 	db := conection()
 	db.Find(&countries)
 
@@ -71,7 +71,7 @@ func GetAPIContries(ctx *iris.Context) {
 //GetAPICities get data cities
 func GetAPICities(ctx *iris.Context) {
 	ctx.SetHeader("Access-Control-Allow-Origin", "*")
-	var cities []modelsdb.City
+	var cities []models.City
 	id := ctx.Param("id")
 	db := conection()
 	db.Where("country_id = ?", id).Find(&cities)
@@ -83,7 +83,7 @@ func GetAPICities(ctx *iris.Context) {
 //GetAPIProducts get data products
 func GetAPIProducts(ctx *iris.Context) {
 	ctx.SetHeader("Access-Control-Allow-Origin", "*")
-	var products []modelsdb.Product
+	var products []models.Product
 	db := conection()
 	db.Find(&products)
 	ctx.JSON(iris.StatusOK, products)
