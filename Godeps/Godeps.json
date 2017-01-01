@@ -5,8 +5,8 @@
     "Packages": [
         "./...",
         "github.com/jinzhu/gorm",
-        "./packages",
-        "github.com/kataras/iris"
+        "github.com/kataras/iris",
+        "github.com/jinzhu/gorm/dialects/postgres"
     ],
 	"Deps": []
 }
