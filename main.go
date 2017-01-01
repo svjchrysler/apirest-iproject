@@ -4,6 +4,8 @@ import (
 	"fmt"
 	"log"
 
+	"os"
+
 	"./packages"
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/postgres"
@@ -97,6 +99,8 @@ func main() {
 	iris.Get("/api/cities/:id", GetAPICities)
 	iris.Get("/api/products", GetAPIProducts)
 
-	iris.Listen(":8080")
+	port := os.Getenv("PORT")
+
+	iris.Listen(":" + port)
 
 }
