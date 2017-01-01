@@ -1,4 +1,4 @@
-package packages
+package modelsdb
 
 //Country class
 type Country struct {

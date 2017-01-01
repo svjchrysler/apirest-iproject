@@ -1,4 +1,4 @@
-package packages
+package modelsdb
 
 //Product class
 type Product struct {
