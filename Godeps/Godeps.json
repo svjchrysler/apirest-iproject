@@ -3,7 +3,10 @@
 	"GoVersion": "go1.7",
 	"GodepVersion": "v75",
     "Packages": [
-        "./..."
+        "./...",
+        "github.com/jinzhu/gorm",
+        "./packages",
+        "github.com/kataras/iris"
     ],
 	"Deps": []
 }
